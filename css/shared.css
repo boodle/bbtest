@@ -1,0 +1,515 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+* {
+	-webkit-touch-callout: none;				/* prevent callout to copy image, etc when tap to hold */
+	-webkit-text-size-adjust: none;			 /* prevent webkit from resizing text to fit */
+	-webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
+	-webkit-user-select: none;				  /* prevent copy paste, to allow, change 'none' to 'text' */
+}
+
+body {
+	-webkit-touch-callout: none;				/* prevent callout to copy image, etc when tap to hold */
+	-webkit-text-size-adjust: none;			 /* prevent webkit from resizing text to fit */
+	-webkit-user-select: none;				  /* prevent copy paste, to allow, change 'none' to 'text' */
+	background-color:#FFF;
+	font-family: 'HelveticaNeue', Helvetica, Arial, sans-serif;
+	font-size:12px;
+	height:100%;
+	margin:0px;
+	padding:0px;
+	width:100%;
+}
+
+@font-face {
+	font-family: Raleway;
+	src: url(Raleway-Regular.ttf);
+}
+
+.desktop { display: none; }
+.hide { display: none; }
+.app {
+	position: relative;
+}
+
+.app>div {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height:100%;
+	width:100%;
+	text-align:left;
+}
+
+#loader {
+	background-color: rgba(0,0,0,0);
+	position: fixed;
+	z-index: 9000;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+
+/* ################################################################################# Navigation */
+.app header {
+	top: -100px;
+	position: fixed;
+	height: 100px;
+	width: 100%;
+	z-index: 100;
+	background-color: #333;
+	background: #333 url(../img/logo_saynotoolkit_header.png) no-repeat center center;
+}
+
+.app header nav .back,
+.app header nav .home {
+	position: absolute;
+	display: block;
+	height: 58px;
+	text-indent: 100%;
+	white-space: nowrap;
+	top: 20px;
+	cursor: pointer;
+	background-color: transparent;
+	background-image: url(../img/btns_ios.png);
+	overflow: hidden;
+}
+
+.app header nav .back {
+	background-position: 0 0;
+	width: 99px;
+	left: 4.5%;
+}
+.app header nav .back:active { background-position: 0 -58px; }
+
+.app header nav .home {
+	background-position: -99px 0;
+	width: 120px;
+	right: 4.5%;
+}
+.app header nav .home:active { background-position: -99px -58px; }
+
+/* ################################################################################# Branch */
+.branch {
+	position: absolute;
+	left: 100%;
+	top: 0;
+	width: 100%;
+}
+.branch:first-child { left: 0; }
+.branch.previous { left: -100%; }
+
+.branch h2 {
+	margin-top: 100px;
+	padding: 0.77em 4.5%;
+	font-size: 2.5em;
+	font-weight: bold;
+	color: #FFF;
+	line-height: 1.4em;
+}
+
+.nodeCollection li {
+	position: relative;
+	margin: 0;
+	/*border-bottom: 4px dotted #999;*/
+	padding: 0.8em 4.5% 0.8em 4.5%;
+	font-size: 2.5em;
+	font-weight: normal;
+	color: #333;
+	line-height: 1.4em;
+	background: transparent url(data:image/gif;base64,R0lGODlhBgAEAKIAAP///5mZmezs7MzMzN/f35+fnwAAAAAAACH5BAAAAAAALAAAAAAGAAQAAAMLCDQCICEUB6VTzCUAOw==) repeat-x bottom left;
+}
+
+.nodeCollection .next {
+	display: block;
+	position: absolute;
+	top: 0.8em;
+	right: 0.5em;
+	width: 38px;
+	height: 38px;
+	background: #999 url(../img/chevron.png) no-repeat 13px 7px;
+	text-indent: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+	-webkit-border-radius: 19px;
+	border-radius: 19px;
+}
+
+.nodeCollection .hasDescendants { font-weight: bold; cursor: pointer; }
+.nodeCollection .hasDescendants:active { background-color: #E5E5E5; }
+.nodeCollection .hasDescendants div { padding-right: 2em; }
+
+
+
+/* ################################################################################# First screen styles */
+.parent_nodeId_0 h1 {
+	margin: 1em 4.5%;
+}
+
+.parent_nodeId_0 h1 img {
+	width: 75%;
+}
+
+.parent_nodeId_0 .nodeCollection li {
+	margin: 0 4.5% 0 4.5%;
+	padding: 10px 0 10px 0;
+	font-family: Raleway;
+	font-size: 5em;
+}
+
+.parent_nodeId_0 .nodeCollection .next {
+	right: 0;
+	top: 0.5em;
+}
+
+.parent_nodeId_0 .nodeCollection li:first-child {
+	background-image: url(data:image/gif;base64,R0lGODlhBgAEAKIAAP///5mZmezs7MzMzN/f35+fnwAAAAAAACH5BAAAAAAALAAAAAAGAAQAAAMLCDQCICEUB6VTzCUAOw==),url(data:image/gif;base64,R0lGODlhBgAEAKIAAP///5mZmezs7MzMzN/f35+fnwAAAAAAACH5BAAAAAAALAAAAAAGAAQAAAMLCDQCICEUB6VTzCUAOw==);
+	background-position: top left, bottom left;
+	background-repeat: repeat-x;
+}
+
+.parent_nodeId_0 .nodeCollection li:nth-child(1) div { color: #F39200; }
+.parent_nodeId_0 .nodeCollection li:nth-child(2) div { color: #95C11F; }
+.parent_nodeId_0 .nodeCollection li:nth-child(3) div { color: #E30613; }
+
+.parent_nodeId_0 .nodeCollection li:nth-child(1) .next { background-color: #F39200; }
+.parent_nodeId_0 .nodeCollection li:nth-child(2) .next { background-color: #95C11F; }
+.parent_nodeId_0 .nodeCollection li:nth-child(3) .next { background-color: #E30613; }
+
+
+/* ################################################################################# Outcome styles */
+.endBranch h2 { display: none; }
+.endBranch h3 { margin: 5em 4.5% 0 4.5%; }
+
+.endBranch h3 img {
+	width: 90%;
+	max-width: 566px;
+}
+
+.endBranch .nodeCollection li {
+	font-weight: normal;
+	border-bottom: none;
+	padding: 1em 4.5% 0.5em 4.5%;
+	background: none !important;
+}
+.endBranch  .nodeCollection li:active { background-color: transparent; }
+
+/* ################################################################################# Reactive styles */
+/* Landscape layout (with min-width) */
+@media screen and (min-aspect-ratio: 1/1) and (min-width:400px) {
+	.app {
+		
+	}
+}
+
+/* iPhones 5 to 3 sized devives */
+@media screen and (max-width:570px) {
+	.parent_nodeId_0 .nodeCollection li { font-size: 2em; }
+	.nodeCollection .next { -webkit-transform: scale(0.5,0.5); }
+
+	.app header {
+		height: 5em;
+		background-size: 35% auto;
+	}
+
+	.app header nav .back, 
+	.app header nav .home {
+		top: 0;
+		-webkit-transform: scale(0.5,0.5);
+	}
+
+	.app header nav .back { left: -0.8em; }
+	.app header nav .home { right: -0.8em; }
+
+	.branch h2 { 
+		margin-top: 60px;
+		font-size: 1.5em;
+	}
+
+	.parent_nodeId_0 .nodeCollection li:first-child { background-size: 3px 2px; }
+
+	.nodeCollection li { font-size: 1.5em; background-size: 3px 2px; }
+	.nodeCollection .next { top: 0.5em; }
+
+	.endBranch ul { padding-top: 0; }
+}
+
+
+
+
+/* ################################################################################# Desktop styles */
+@media screen and (min-width:956px) {
+	.desktop { display: block; }
+	.hide { 
+		display: block;
+		margin-left: 38px;
+	}
+
+	body {
+		background: #FFF url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAACMwAAAAGCAMAAAACTGBXAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAAlQTFRF////zczM1tbW8o+sqQAAAEZJREFUeNrs2MERAEAEBMEl/6AvDNR1PyYElCTpatXxAgcZXbplgVSV6niBg4wu3bJAnHTqMwP4zKgFAgAAAAAAwE+eAAMAtOgK+WQRdzUAAAAASUVORK5CYII=) repeat-y top center;
+	}
+
+	#wrap {
+		position: relative;
+		width: 956px;
+		background-color: #FFF;
+		margin: 0 auto 150px auto;
+	}
+
+	/* Top navigation */
+	header.desktop {
+		overflow: hidden;
+		background: #FFF url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAA7wAAAAECAMAAACa7MOAAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAB5QTFRF////mZmZs7Oz5ubm7Ozsn5+f2dnZ09PTv7+/+fn50VwioQAAADZJREFUeNrsxLkBADAIAzEc8u6/cEZwQ0FxKhRRJc9jZns/UxrM7G4opcXM7o7u2MxsL/MFGAAlUBv0PIxJSQAAAABJRU5ErkJggg==) no-repeat bottom left;
+		padding-bottom: 50px;
+	}
+
+	header.desktop h1 {
+		width: 268px;
+		height: 47px;
+		white-space: nowrap;
+		text-indent: 100%;
+		overflow: hidden;
+		background: #FFF url(../img/logo_ibe_welcome.png) no-repeat 0 0;
+		margin: 48px 0 0 72px;
+	}
+
+	header.desktop nav {
+		position: absolute;
+		left: 513px;
+		top: 0;
+		height: 25px;
+	}
+
+	header.desktop li {
+		text-transform: uppercase;
+		float: left;
+		padding: 7px 10px;
+		font-size: 11px;
+		margin-right: 5px;
+	}
+
+	header.desktop li:last-child { margin-right: 0; }
+
+	header.desktop li a {
+		color: #676767;
+		text-decoration: none;
+	}
+
+	header.desktop .selected {
+		-webkit-border-bottom-right-radius: 10px;
+		-webkit-border-bottom-left-radius: 10px;
+		-moz-border-radius-bottomright: 10px;
+		-moz-border-radius-bottomleft: 10px;
+		border-bottom-right-radius: 10px;
+		border-bottom-left-radius: 10px;
+	}
+
+	header.desktop .selected a { color: #FFF; }
+
+	/* Welcome text */
+	#introduction {
+		width: 375px;
+		margin: 40px 0 0 73px;
+	}
+
+	#introduction h1 {
+		width: 250px;
+		color: #333;
+		font-size: 25px;
+		font-weight: normal;
+		line-height: 1.3em;
+	}
+
+	#introduction h2 {
+		width: 212px;
+		height: 69px;
+		white-space: nowrap;
+		text-indent: 100%;
+		overflow: hidden;
+		background: #FFF url(../img/logo_saynotoolkit_welcome.png) no-repeat 0 0;
+		margin: 31px 0 33px 0;
+	}
+
+	#introduction p {
+		line-height: 1.4em;
+		margin-bottom: 1.4em;
+		font-size: 13px;
+	}
+
+	/* app itself */
+	.parent_nodeId_0.hide { margin-top: 40px; }
+	.parent_nodeId_0 h1 { display: none; }
+	.app header { display: none; }
+
+	.branches {
+		width: 478px;
+		left: 50%;
+		position: relative;
+	}
+
+	.branch { background-color: #FFF; }
+	.branch > div { margin-bottom: 150px; }
+
+	.branches .branch h2 {
+		background-color: transparent;
+		color: #333;
+		margin: 22px 75px 60px 33px;
+        padding: 0;
+		font-weight: normal;
+		font-size: 20px;
+	}
+
+	/* first page */
+	.parent_nodeId_0 .nodeCollection li { 
+		margin: 0 75px 0 30px;
+		font-size: 3em;
+	}
+
+	.parent_nodeId_0 .nodeCollection li:first-child { 
+		background-position: bottom left; 
+		padding-top: 0;
+	}
+
+    .parent_nodeId_0 .nodeCollection .next {
+        width: 26px;
+        height: 26px;
+        top: 22px;
+        background-size: 11px auto;
+        background-position: 9px 5px;
+    }
+
+    .parent_nodeId_0 .nodeCollection li:nth-child(1) .next { top: 15px; }
+
+	/* regular list items */
+	.branch:nth-child(1n+2) .nodeCollection .hasDescendants {
+		position: relative;
+		margin: 0 74px 15px 34px;
+		padding: 5px 40px 5px 15px;
+		font-size: 13px;
+		font-weight: normal;
+		color: #333;
+		line-height: 1.4em;
+		border-radius: 40px; 
+		-moz-border-radius: 40px; 
+		-webkit-border-radius: 40px; 
+		border: 1px solid #999;
+
+		/* Gradients from: http://www.colorzilla.com/gradient-editor/ */
+		background: #e3e3e3; /* Old browsers */
+		background: -moz-linear-gradient(top,  #e3e3e3 0%, #fefefe 18%, #dddddd 100%); /* FF3.6+ */
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#e3e3e3), color-stop(18%,#fefefe), color-stop(100%,#dddddd)); /* Chrome,Safari4+ */
+		background: -webkit-linear-gradient(top,  #e3e3e3 0%,#fefefe 18%,#dddddd 100%); /* Chrome10+,Safari5.1+ */
+		background: -o-linear-gradient(top,  #e3e3e3 0%,#fefefe 18%,#dddddd 100%); /* Opera 11.10+ */
+		background: -ms-linear-gradient(top,  #e3e3e3 0%,#fefefe 18%,#dddddd 100%); /* IE10+ */
+		background: linear-gradient(to bottom,  #e3e3e3 0%,#fefefe 18%,#dddddd 100%); /* W3C */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e3e3e3', endColorstr='#dddddd',GradientType=0 ); /* IE6-9 */
+	}
+
+	/* hide all except the last 2 branches */
+	.branch { display: none; }
+	.branch:last-child, .branch:nth-last-child(2) { display: block !important; }
+
+	.branch:nth-child(1n+2) .nodeCollection .next {
+		top: 6px;
+		right: 6px;
+		width: 16px;
+		height: 16px;
+		background-size: 6px auto;
+		background-position: 6px 4px;
+	}
+
+	/* Answer styles */
+	.endBranch .nodeCollection li { font-size: 14px; }
+	.endBranch h3 img { width: 50%; }
+	.branch .endBranch h2 { margin-bottom: 0; }
+
+	/* footer */
+	footer.desktop {
+		position: fixed;
+		bottom: 0;
+		width: 100%;
+		height: 100px;
+		background: #333 url(data:image/gif;base64,R0lGODlhBgAGAJEAADMzM2dnZ11dXQAAACH5BAAAAAAALAAAAAAGAAYAAAIKhBViEL2olpyzAAA7) repeat top center;
+	}
+
+	footer.desktop > div {
+		position: relative;
+		width: 956px;
+		height: 100px;
+		margin: 0 auto;
+		background: #333 url(../img/logo_saynotoolkit_footer.png) no-repeat 72px 28px;
+	}
+
+	footer.desktop ul {
+		position: absolute;
+		top: 44px;
+		left: 513px;
+	}
+
+	footer.desktop li {
+		float: left;
+		font-size: 11px;
+		background: transparent url(data:image/gif;base64,R0lGODlhAgALAIAAAHx8fFVVVSH5BAAAAAAALAAAAAACAAsAAAIFDIynyVAAOw==) no-repeat 0 0;
+		padding-left: 16px;
+		margin-left: 18px;
+		color: #878787;
+	}
+
+	footer.desktop li:first-child {
+		background-image: none;
+		padding-left: 0;
+		margin-left: 0;
+	}
+
+	footer.desktop li a {
+		text-decoration: none;
+		color: #878787;
+	}
+}

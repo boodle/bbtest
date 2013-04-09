@@ -1,0 +1,21 @@
+.parent_nodeId_0 h1 img {
+	max-width: 368px;
+}
+
+.branch h2,
+.nodeCollection li:active .next,
+.nodeCollection .next:active {
+	background-color: #491D6D;
+}
+
+/* ################################################################################# Desktop styles */
+@media screen and (min-width:956px) {
+	body {
+		border-top: 5px solid #491D6D;
+	}
+
+	.nodeCollection .selected .next,
+	header.desktop .selected {
+        background-color: #491D6D;
+    }
+}
