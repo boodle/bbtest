@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget xmlns     = "http://www.w3.org/ns/widgets"
+        xmlns:gap = "http://phonegap.com/ns/1.0"
+        id        = "com.totalonion.bbtest"
+        version   = "0.0.1">
+    <name>bbtest</name>
+
+    <description>
+        BB build test
+    </description>
+
+    <author href="http://www.totalonion.com/" email="support@totalonion.com">Total Onion</author>
+
+    <access origin="*" />
+
+    <preference name="phonegap-version" value="2.3.0" />
+    <preference name="orientation"      value="landscape" />
+    <preference name="target-device"    value="universal" />
+    <preference name="fullscreen"       value="false" />
+    <preference name="permissions"      value="none"/>
+
+    <icon src="icon.png" />
+    <gap:splash src="splash.png" />
+</widget>
